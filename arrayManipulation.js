@@ -1,3 +1,5 @@
+// processArray function creation
+
 function processArray(myArray){
     for(let i = 0; i < myArray.length; i++){
         let newNum = myArray[i] % 2
@@ -8,7 +10,7 @@ function processArray(myArray){
             let finalNum = myArray[i] * 3
             console.log(finalNum)
         }
-    }
+    }return myArray
 }
 
 
@@ -26,7 +28,7 @@ function formatArrayStrings(arrayStrings, newArray){
         }else{
             arrayStrings[a] = arrayStrings[a].toLowerCase()
         }
-    }
+    }return arrayStrings
     
 
 }
@@ -34,10 +36,16 @@ function formatArrayStrings(arrayStrings, newArray){
 
 const stringArray = ['Obed','Mango', 'Pawpaw', 'Egg']
 
-const modifiedStringArray =  console.log(formatArrayStrings(stringArray, newArray))
+//Exporting the modifiedString
+export const modifiedString = formatArrayStrings(stringArray, newArray)
 
 
-module.exports = modifiedStringArray
+console.log(modifiedString)
+
+
+
+
+
 
 
 
